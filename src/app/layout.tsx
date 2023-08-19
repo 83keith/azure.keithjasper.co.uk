@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { Main } from "next/document";
 import { Inter } from "next/font/google";
 import { Navigation } from "../../components/Navigation";
-import { RemoteStyles } from "../../components/RemoveStyles";
+import { CustomStyles } from "../../components/CustomStyles";
 import { TopBar } from "../../components/TopBar";
 import { Hero } from "../../components/Hero";
 
@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <RemoteStyles />
+        <CustomStyles />
       </head>
       <body>
         <main>
