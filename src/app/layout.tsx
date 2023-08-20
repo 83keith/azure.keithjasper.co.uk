@@ -6,6 +6,7 @@ import { Navigation } from "@/components/Navigation";
 import { CustomStyles } from "@/components/CustomStyles";
 import { TopBar } from "@/components/TopBar";
 import { Footer } from "@/components/Footer";
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,6 +26,19 @@ export default function RootLayout({
       <head>
         <CustomStyles />
       </head>
+      <Script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-QKP9XVQTK7"
+      />
+      <Script>
+        {`
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+        gtag('config', 'G-QKP9XVQTK7');
+        `}
+      </Script>
       <body>
         <main>
           <Navigation />
