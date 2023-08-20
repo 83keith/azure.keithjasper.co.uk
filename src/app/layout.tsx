@@ -2,10 +2,10 @@
 import type { Metadata } from "next";
 import { Main } from "next/document";
 import { Inter } from "next/font/google";
-import { Navigation } from "../../components/Navigation";
-import { CustomStyles } from "../../components/CustomStyles";
-import { TopBar } from "../../components/TopBar";
-import { Hero } from "../../components/Hero";
+import { Navigation } from "@/components/Navigation";
+import { CustomStyles } from "@/components/CustomStyles";
+import { TopBar } from "@/components/TopBar";
+import { Footer } from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -30,8 +30,9 @@ export default function RootLayout({
           <Navigation />
           <div id="content" className="content">
             <TopBar />
-            {<Hero />}
+            {children}
           </div>
+          <Footer />
         </main>
       </body>
     </html>
